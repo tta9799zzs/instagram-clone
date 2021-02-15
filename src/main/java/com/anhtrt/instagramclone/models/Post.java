@@ -15,17 +15,14 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "photos")
-public class Photo {
+@Table(name = "posts")
+public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long photoId;
+    private long postId;
     private long userId;
     private String caption;
-    private float latitude;
-    private float longitude;
-    private String imagePath;
-    private int imageSize;
+    private long imageId;
     @CreatedDate
     private Instant dateCreated;
     @LastModifiedDate
