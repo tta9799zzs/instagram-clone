@@ -1,7 +1,6 @@
 package com.anhtrt.instagramclone.services;
 
 import com.anhtrt.instagramclone.dto.PostRequest;
-import com.anhtrt.instagramclone.mapper.PostMapper;
 import com.anhtrt.instagramclone.repositorys.PostRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,7 +16,6 @@ public class PostService {
     final PostRepository postRepository;
     final ImageService imageService;
     final AuthService authService;
-    final PostMapper postMapper;
 
     public void addPost(PostRequest postRequest, MultipartFile imageFile) throws IOException {
         long imageId = imageService.uploadImage(imageFile);

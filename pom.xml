@@ -76,6 +76,12 @@
             <version>${org.mapstruct.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!-- JWT related dependencies-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.10.5</version>
+        </dependency>
     </dependencies>
 
     <build>

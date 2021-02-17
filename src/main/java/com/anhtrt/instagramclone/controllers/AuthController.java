@@ -1,5 +1,7 @@
 package com.anhtrt.instagramclone.controllers;
 
+import com.anhtrt.instagramclone.dto.AuthenticationResponse;
+import com.anhtrt.instagramclone.dto.LoginRequest;
 import com.anhtrt.instagramclone.dto.RegisterRequest;
 import com.anhtrt.instagramclone.services.AuthService;
 import lombok.AllArgsConstructor;
@@ -25,8 +27,8 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login() {
-        return new ResponseEntity<>("", OK);
+    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+        return authService.login(loginRequest);
     }
 
     @PostMapping("/verify/{token}")
